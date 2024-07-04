@@ -1,0 +1,477 @@
+/*
+    --Indice--
+    -linea-     | -nombre-
+    -16 - 84-   | Cuerpo y general
+    -85 - 98-   | Marco de sección
+    -99 - 145-  | Inicio de var
+    -146 - 194- | boton de var
+    -195 - 231- | Fin de var - Panel de opciones
+    -232 - 289- | Inicio de tablon de anuncios
+    -290 - 315- | Fin de tablon - Botones
+    -314 - 338- | Panel de logos
+    -339 - 358- | Footer
+    -359 - 397- | Estilizacion del libro
+    -398 - 999- | Media queries
+*/
+:root {
+    --bg-color: #0c0c13;
+    --bg-color-section: #101010;
+    --text-color: #c5c5c5;
+    --var-color: #17151f;
+    --panel-color: #121414f6;
+    --bg-color-footer: #0b0b0c;
+    --text-color-footer: #5a6680;
+    --border-color: #737373;
+    --button-bg-color: #20202b;
+    --button-text-color: #5897a2;
+    --separador-color: #3c4761;
+    font-family: Merriweather, roboto, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scrollbar-color:#555596 #4f4f4f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-image: url(../images/filtro-web.png);
+
+}
+
+.main {
+    padding: 0 15px;
+}
+
+h1 {
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 6px;
+}
+
+p {
+    text-align: left;
+    text-wrap: pretty;
+    padding: 0 5%;
+}
+
+.description {
+    text-align: center;
+}
+
+h2, h3, h4{
+    text-wrap: balance;
+    text-align: center;
+}
+
+
+#html {
+    color: #ff7f50;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+#css {
+    color: #48e;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+#js {
+    color: #ffff00;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.separador {
+    width: 82%;
+    height: 2px;
+    background-color: var(--separador-color);
+    margin: auto;
+}
+
+.separador-little {
+    width: 56%;
+    height: 2px;
+}
+
+/* ------------------------ Marco para Secciones */ 
+
+.sections {
+    background-color: var(--bg-color-section);
+    background-image: url(../images/filtro-web.png);
+    border: solid 3px var(--border-color);
+    height: fit-content;
+    width: clamp(60mm, 100%, 30cm);
+    margin: auto;
+    margin-bottom: 10mm;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* ------------------------ Inicío de var */
+
+.var {
+    background-color: var(--var-color);
+    background-image: url(../images/filtro-web.png);
+    display: flex;
+    padding: 10px;
+    padding-top: 12px;
+    justify-content: space-between;
+    overflow: hidden;
+    position: sticky;
+    height: 14.5mm;
+    top: 0;
+    z-index: 30;
+}
+
+.logo {
+    background-image: url(../images/DISLETE.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 2em;
+    width: 60mm;
+}
+
+.var__option {
+    display: none;
+    align-self: center;
+}
+
+.var__option > a {
+    text-decoration: none;
+    color: var(--button-text-color);
+    padding: 6px 10px;
+    margin: 10px;
+    background-color: var(--button-bg-color);
+    border: solid 1px var(--border-color);
+    border-radius: 8px;
+    font-weight: 900;
+    font-family: roboto;
+    letter-spacing: 1.5px;
+}
+
+.var__option > a:hover {
+    background-color: #3e3d49;
+    color: #80c9de;
+    text-shadow: 1px 1px 8px #000000;
+    border: solid 1px #404040;
+} 
+/* ------------------------- boton de sección */
+
+#top__button {
+    display: none;
+}
+
+.button__content {
+    z-index: 30;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #3d3a52;
+    width: 30px;
+    height: 30px;
+    transition-timing-function: linear;
+    transition: all .8s;
+}
+
+.button__content > div {
+    background-color: #131313;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transform-origin: left;
+    transition-timing-function: linear;
+    transition: all .2s ;
+}
+
+input[type="checkbox"]:checked ~ .button__content {
+    background-color: rgb(173, 7, 7);
+    box-shadow: 0 0 8px 0 rgb(233, 14, 14);
+}
+
+input[type="checkbox"]:checked ~ .button__content > div:first-child{
+    transform: rotate(42deg);
+    width: 33.5px;
+}
+input[type="checkbox"]:checked ~ .button__content > div:nth-child(2){
+    width: 0;
+    transform: translate(4.5px);
+    background-color: transparent;
+}
+input[type="checkbox"]:checked ~ .button__content > div:last-child{
+    transform: rotate(-42.5deg);
+    width: 33.5px;
+}
+
+/* ------------------- Panel de opciones */
+
+.panel__option {
+    background-color: var(--panel-color);
+    border-left: solid 2px #444444f8;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    right: -100vw;
+    width: 38mm;
+    height: 100vh;
+    padding-top: 80px;
+    transition: right 0.32s ease-in-out;
+    text-align: left;
+}
+
+.panel__bg {
+    background-color: #000000;
+    opacity: 0%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    right: -100vw;
+    height: 100dvh;
+    width: 100vw;
+    transition: opacity .5s;
+}
+
+.option__ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.option__item {
+    background-color: #515a6d5d;
+    padding: 10px 0 5px 15px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    border: solid 1px var(--border-color);
+    border-bottom-left-radius: 20px;
+    border-right: none;
+}
+
+.option__item:hover {
+    background-color: #3c4761;
+    border-color: transparent;
+}
+
+.option__item > a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: roboto;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+input[type="checkbox"]:checked ~ .panel__option {
+    right: 0;
+}
+
+input[type="checkbox"]:checked ~ .panel__bg {
+    right: 0;
+    opacity: 25%;
+}
+
+/* --------------------------- Tablon de anunciós */
+
+.TítuloTablon {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.Tablon {
+    background-color: var(--bg-color-section);
+    border: solid 4px var(--border-color);
+    border-left: none;
+    border-right: none;
+    height: clamp(70mm, 65vh, 100mm);
+    width: clamp(60mm, 90vw, 140mm);
+    margin: auto;
+    position: relative;
+}
+
+.Tablon__item {
+    background-color: var(--text-color-footer);
+    border: solid 2px var(--border-color);
+    border-left: none;
+    border-right: none;
+    height: 80%;
+    width: 58%;
+    padding: 0 8px;
+    position: absolute;
+    top: 2.5rem;
+    transition: all .2s;
+}
+
+.item-center {
+    top: 2rem;
+    z-index: 10;
+    height: 85%;
+    right: 20.2%;
+}
+
+.item-lefth {
+    left: 0.5rem;
+    opacity: 40%;
+}
+
+.item-rigth {
+    right: 0.5rem;
+    opacity: 40%;
+}
+
+.item__button {
+    background-color: #48e;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 5px 10px;
+    margin-left: 5%;
+}
+
+/* ------------------------- botones del tablon */
+
+.Tablon__button {
+    border: none;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    color: var(--text-color);
+    transition: background-size .4s;
+}
+
+.button-left {
+    background: url(../images/arrow_left.png);
+    background-size: 3.5rem;
+    background-position: left;
+    background-repeat: no-repeat;
+    left: 0;
+}
+
+.button-right {
+    background: url(../images/arrow_right.png);
+    background-size: 3.5rem;
+    background-position: right;
+    background-repeat: no-repeat;
+    right: 0;
+}
+.Tablon__button:hover {
+    background-size: 4rem;
+}
+/* ------------------------- panel de logos */
+
+.contain-icono {
+    display: flex;
+    flex-flow: row wrap;
+    height: 32mm;
+    width: clamp(30mm, 80%, 100mm);
+    justify-content:space-between;
+    align-content: space-between;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.icono {
+    filter: drop-shadow(0 0 7px #7c7c7c);
+    object-fit: contain;
+    height: 55px;
+    width: 50px;
+    transition: all .25s;
+}
+
+.icono:hover {
+    filter: drop-shadow(0 0 16px #8181b2);
+}
+
+/* pie de la página */
+
+.footer {
+    background-color: var(--bg-color-footer);
+    background-image: url(../images/filtro-web.png);
+    color: var(--text-color-footer);
+    padding: 2vh;
+    text-align: left;
+    font-weight: 400;
+}
+
+.footer h5 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer p {
+    font-size: .8rem;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.footer a {
+    color: var(--text-color-footer);
+    text-decoration: none;
+    font-size: .8rem;
+    padding-left: 10px;
+}
+
+/* -------------------------------- estilo libro */
+
+.ventana {
+    width: 92vw;
+    height: 85vh;
+    background-color: #212121;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.ventana__img {
+    position: absolute;
+    width: 95%;
+    height: 60%;
+    background-image: url(../images/map.jpg);
+    background-size: contain;
+    top: 10px;
+    right: 2.5%;
+}
+
+.ventana__text {
+    position: absolute;
+    width: 95%;
+    height: 35%;
+    background-color: #404040;
+    bottom: 10px;
+    right: 2.5%;
+    overflow: hidden;
+}
+
+.ventana__text button {
+    background-color: #65504e;
+    border: none;
+    margin-left: 90%;
+    width: 18mm;
+    height: 28px;
+}
+
+/* -------------------------------- media queris - var */
+
+@media (min-width:600px) {
+    .button__content {
+        display: none;
+    }
+    .panel__option {
+        display: none;
+    }
+    .var__option {
+        display: inline-block;
+    }
+    .panel__bg {
+        display: none;
+    }
+}
