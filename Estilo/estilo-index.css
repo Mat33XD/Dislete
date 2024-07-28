@@ -253,22 +253,25 @@ input[type="checkbox"]:checked ~ .button__content > div:last-child{
 }
 
 .option__item > a {
+    min-width: min-content;
+    max-width: 120px;
+    display: block;
     border: solid 2px var(--border-color);
-    border-top: none;
-    border-left: none;
-    border-bottom-right-radius: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom-right-radius: 5px;
     text-decoration: none;
     color: var(--text-color);
     font-family: roboto;
     font-weight: 900;
     font-size: 18px;
     letter-spacing: 3px;
-    padding-right: 10px;
-    padding-bottom: 1px;
+    transition: color .2s, border .2s;
 }
 
 .option__item > a:hover {
-    color: var(--text-color-footer);
+    color: var(--separador-color);
+    border-color: #201d33;
 }
 
 input[type="checkbox"]:checked ~ .panel__option {
