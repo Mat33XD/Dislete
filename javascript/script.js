@@ -54,4 +54,4 @@ function move(num) {
         Itemtre.classList.remove("item-rigth", "item-lefth")
     }
 
-}
+};
