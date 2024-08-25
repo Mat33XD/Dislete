@@ -154,6 +154,7 @@ h2, h3, h4{
     font-weight: 900;
     font-family: roboto;
     letter-spacing: 1.5px;
+    transition: all 0.2s;
 }
 
 .var__option > a:hover {
@@ -238,7 +239,7 @@ input[type="checkbox"]:checked ~ .button__content > div:last-child{
     right: -100vw;
     height: 100dvh;
     width: 100vw;
-    transition: opacity .5s;
+    transition: opacity .5s .01s, right .01s;
 }
 
 .option__ul {
