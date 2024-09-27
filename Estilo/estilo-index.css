@@ -14,22 +14,22 @@
     -398 - 999- | Media queries
 */
 :root {
-    --bg-color: #0c0c13;
-    --bg-color-section: #101010;
-    --text-color: #c5c5c5;
-    --var-color: #17151f;
-    --panel-color: #0e0e14;
-    --bg-color-footer: #0b0b0c;
-    --text-color-footer: #5a6680;
-    --border-color: #737373;
-    --button-bg-color: #20202b;
-    --button-text-color: #5897a2;
-    --separador-color: #3c4761;
+    --dark-bg-color: #0c0c13;
+    --dark-bg-color-section: #101010;
+    --dark-text-color: #c5c5c5;
+    --dark-var-color: #17151f;
+    --dark-panel-color: #0e0e14;
+    --dark-bg-color-footer: #0b0b0c;
+    --dark-text-color-footer: #5a6680;
+    --dark-border-color: #737373;
+    --dark-button-bg-color: #20202b;
+    --dark-button-text-color: #5897a2;
+    --dark-separador-color: #3c4761;
     font-family: Merriweather, roboto, sans-serif;
     font-weight: 400;
     font-size: 17px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
     scrollbar-color:#555596 #4f4f4f;
 }
 
@@ -48,7 +48,7 @@ body{
 }
 
 h1 {
-    color: var(--text-color);
+    color: var(--dark-text-color);
     text-align: center;
     font-weight: 900;
     font-size: 3rem;
@@ -90,7 +90,7 @@ h2, h3, h4{
 .separador {
     width: 82%;
     height: 2px;
-    background-color: var(--separador-color);
+    background-color: var(--dark-separador-color);
     margin: auto;
 }
 
@@ -102,9 +102,9 @@ h2, h3, h4{
 /* ------------------------ Marco para Secciones */ 
 
 .sections {
-    background-color: var(--bg-color-section);
+    background-color: var(--dark-bg-color-section);
     background-image: url(../images/filtro-web.png);
-    border: solid 3px var(--border-color);
+    border: solid 3px var(--dark-border-color);
     height: fit-content;
     width: clamp(60mm, 100%, 30cm);
     margin: auto;
@@ -117,12 +117,12 @@ h2, h3, h4{
 /* ------------------------ Inicío de var */
 
 .var {
-    background-color: var(--var-color);
+    background-color: var(--dark-var-color);
     background-image: url(../images/filtro-web.png);
     display: flex;
     padding: 10px;
     padding-top: 12px;
-    justify-content: space-between;
+    justify-content:space-between;
     overflow: hidden;
     position: sticky;
     height: 14.5mm;
@@ -145,11 +145,11 @@ h2, h3, h4{
 
 .var__option > a {
     text-decoration: none;
-    color: var(--button-text-color);
+    color: var(--dark-button-text-color);
     padding: 6px 10px;
     margin: 10px;
-    background-color: var(--button-bg-color);
-    border: solid 1px var(--border-color);
+    background-color: var(--dark-button-bg-color);
+    border: solid 1px var(--dark-border-color);
     border-radius: 8px;
     font-weight: 900;
     font-family: roboto;
@@ -163,6 +163,37 @@ h2, h3, h4{
     text-shadow: 1px 1px 8px #000000;
     border: solid 1px #404040;
 } 
+
+#teme__button {
+    position: relative;
+    background-color: #3c4761;
+    border: solid 1px white;
+    border-radius: 10px;
+    width: 50px;
+    height: 22px;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+#teme__mode {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    right: 29px;
+    background-color: #20202b;
+    transition: all .2s;
+}
+
+#teme__interruptor {
+    display: none;
+}
+
+#teme__interruptor:checked + #teme__button > #teme__mode {
+    right: 3px;
+    background-color: #c5c5c5;
+}
+
 /* ------------------------- boton de sección */
 
 #top__button {
@@ -193,21 +224,21 @@ h2, h3, h4{
     transition: all .2s ;
 }
 
-input[type="checkbox"]:checked ~ .button__content {
+#top__button:checked ~ .button__content {
     background-color: rgb(173, 7, 7);
     box-shadow: 0 0 8px 0 rgb(233, 14, 14);
 }
 
-input[type="checkbox"]:checked ~ .button__content > div:first-child{
+#top__button:checked ~ .button__content > div:first-child{
     transform: rotate(42deg);
     width: 33.5px;
 }
-input[type="checkbox"]:checked ~ .button__content > div:nth-child(2){
+#top__button:checked ~ .button__content > div:nth-child(2){
     width: 0;
     transform: translate(4.5px);
     background-color: transparent;
 }
-input[type="checkbox"]:checked ~ .button__content > div:last-child{
+#top__button:checked ~ .button__content > div:last-child{
     transform: rotate(-42.5deg);
     width: 33.5px;
 }
@@ -215,7 +246,7 @@ input[type="checkbox"]:checked ~ .button__content > div:last-child{
 /* ------------------- Panel de opciones */
 
 .panel__option {
-    background-color: var(--panel-color);
+    background-color: var(--dark-panel-color);
     background-image: url(../images/filtro-web-start.png);
     background-size: contain;
     filter: drop-shadow(0px 0px 6px rgb(21, 23, 39));
@@ -257,12 +288,12 @@ input[type="checkbox"]:checked ~ .button__content > div:last-child{
     min-width: min-content;
     max-width: 120px;
     display: block;
-    border: solid 2px var(--border-color);
+    border: solid 2px var(--dark-border-color);
     border-top: 0px;
     border-left: 0px;
     border-bottom-right-radius: 5px;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--dark-text-color);
     font-family: roboto;
     font-weight: 900;
     font-size: 18px;
@@ -271,15 +302,15 @@ input[type="checkbox"]:checked ~ .button__content > div:last-child{
 }
 
 .option__item > a:hover {
-    color: var(--separador-color);
+    color: var(--dark-separador-color);
     border-color: #201d33;
 }
 
-input[type="checkbox"]:checked ~ .panel__option {
+#top__button:checked ~ .panel__option {
     right: 0;
 }
 
-input[type="checkbox"]:checked ~ .panel__bg {
+#top__button:checked ~ .panel__bg {
     right: 0;
     opacity: 25%;
 }
@@ -292,8 +323,8 @@ input[type="checkbox"]:checked ~ .panel__bg {
 }
 
 .Tablon {
-    background-color: var(--bg-color-section);
-    border: solid 4px var(--border-color);
+    background-color: var(--dark-bg-color-section);
+    border: solid 4px var(--dark-border-color);
     border-left: none;
     border-right: none;
     height: clamp(70mm, 65vh, 100mm);
@@ -303,8 +334,8 @@ input[type="checkbox"]:checked ~ .panel__bg {
 }
 
 .Tablon__item {
-    background-color: var(--text-color-footer);
-    border: solid 2px var(--border-color);
+    background-color: var(--dark-text-color-footer);
+    border: solid 2px var(--dark-border-color);
     border-left: none;
     border-right: none;
     height: 80%;
@@ -335,7 +366,7 @@ input[type="checkbox"]:checked ~ .panel__bg {
 .item__button {
     background-color: #48e;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--dark-text-color);
     padding: 5px 10px;
     margin-left: 5%;
 }
@@ -348,7 +379,7 @@ input[type="checkbox"]:checked ~ .panel__bg {
     height: 100%;
     position: absolute;
     z-index: 0;
-    color: var(--text-color);
+    color: var(--dark-text-color);
     transition: background-size .4s;
 }
 
@@ -398,9 +429,9 @@ input[type="checkbox"]:checked ~ .panel__bg {
 /* pie de la página */
 
 .footer {
-    background-color: var(--bg-color-footer);
+    background-color: var(--dark-bg-color-footer);
     background-image: url(../images/filtro-web.png);
-    color: var(--text-color-footer);
+    color: var(--dark-text-color-footer);
     padding: 2vh;
     text-align: left;
     font-weight: 400;
@@ -420,7 +451,7 @@ input[type="checkbox"]:checked ~ .panel__bg {
 }
 
 .footer a {
-    color: var(--text-color-footer);
+    color: var(--dark-text-color-footer);
     text-decoration: none;
     font-size: .8rem;
     padding-left: 10px;
