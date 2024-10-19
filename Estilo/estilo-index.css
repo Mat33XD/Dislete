@@ -13,31 +13,30 @@
     -359 - 397- | Estilizacion del libro
     -398 - 999- | Media queries
 */
+* {
+    box-sizing: border-box;
+}
+
 :root {
-    --dark-bg-color: #0c0c13;
-    --dark-bg-color-section: #101010;
-    --dark-text-color: #c5c5c5;
-    --dark-var-color: #17151f;
-    --dark-panel-color: #0e0e14;
-    --dark-bg-color-footer: #0b0b0c;
-    --dark-text-color-footer: #5a6680;
-    --dark-border-color: #737373;
-    --dark-button-bg-color: #20202b;
-    --dark-button-text-color: #5897a2;
-    --dark-separador-color: #3c4761;
     font-family: Merriweather, roboto, sans-serif;
     font-weight: 400;
     font-size: 17px;
     background-color: var(--dark-bg-color);
     color: var(--dark-text-color);
     scrollbar-color:#555596 #4f4f4f;
+    --dark-bg-color: #f6fdfd;
+    --dark-bg-color-section: #afaeae;
+    --dark-text-color: #121114;
+    --dark-var-color: #756f8f;
+    --dark-panel-color: #746a81;
+    --dark-bg-color-footer: #12121f;
+    --dark-text-color-footer: #5a6680;
+    --dark-border-color: #c5bac9;
+    --dark-button-bg-color: #473358;
+    --dark-button-text-color: #aaa8ca;
+    --dark-separador-color: #3c4761;
 }
-
-* {
-    box-sizing: border-box;
-}
-
-body{
+body {
     margin: 0;
     background-image: url(../images/filtro-web.png);
 
@@ -76,6 +75,7 @@ h2, h3, h4{
     font-weight: 800;
     letter-spacing: 1px;
 }
+
 #css {
     color: #48e;
     font-weight: 800;
@@ -181,7 +181,7 @@ h2, h3, h4{
     height: 16px;
     border-radius: 50px;
     right: 29px;
-    background-color: #20202b;
+    background-color: #c5c5c5;
     transition: all .2s;
 }
 
@@ -191,7 +191,7 @@ h2, h3, h4{
 
 #teme__interruptor:checked + #teme__button > #teme__mode {
     right: 3px;
-    background-color: #c5c5c5;
+    background-color: #20202b;
 }
 
 /* ------------------------- boton de sección */
@@ -330,6 +330,7 @@ h2, h3, h4{
     height: clamp(70mm, 65vh, 100mm);
     width: clamp(60mm, 90vw, 140mm);
     margin: auto;
+    margin-bottom: 35px;
     position: relative;
 }
 
@@ -432,7 +433,7 @@ h2, h3, h4{
     background-color: var(--dark-bg-color-footer);
     background-image: url(../images/filtro-web.png);
     color: var(--dark-text-color-footer);
-    padding: 2vh;
+    padding: 4px 10px 15px 20px; 
     text-align: left;
     font-weight: 400;
 }
@@ -495,7 +496,6 @@ h2, h3, h4{
     width: 18mm;
     height: 28px;
 }
-
 /* -------------------------------- media queris - var */
 
 @media (min-width:600px) {
