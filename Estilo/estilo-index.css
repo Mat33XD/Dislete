@@ -38,7 +38,7 @@
 }
 body {
     margin: 0;
-    background-image: url(../images/filtro-web.png);
+    background-image: url(../images/filtro-web.webp);
 
 }
 
@@ -103,7 +103,7 @@ h2, h3, h4{
 
 .sections {
     background-color: var(--dark-bg-color-section);
-    background-image: url(../images/filtro-web.png);
+    background-image: url(../images/filtro-web.webp);
     border: solid 3px var(--dark-border-color);
     height: fit-content;
     width: clamp(60mm, 100%, 30cm);
@@ -118,7 +118,7 @@ h2, h3, h4{
 
 .var {
     background-color: var(--dark-var-color);
-    background-image: url(../images/filtro-web.png);
+    background-image: url(../images/filtro-web.webp);
     display: flex;
     padding: 10px;
     padding-top: 12px;
@@ -131,7 +131,7 @@ h2, h3, h4{
 }
 
 .logo {
-    background-image: url(../images/DISLETE.png);
+    background-image: url(../images/DISLETE.webp);
     background-size: contain;
     background-repeat: no-repeat;
     height: 2em;
@@ -247,7 +247,7 @@ h2, h3, h4{
 
 .panel__option {
     background-color: var(--dark-panel-color);
-    background-image: url(../images/filtro-web-start.png);
+    background-image: url(../images/filtro-web-start.webp);
     background-size: contain;
     filter: drop-shadow(0px 0px 6px rgb(21, 23, 39));
     position: fixed;
@@ -385,7 +385,7 @@ h2, h3, h4{
 }
 
 .button-left {
-    background: url(../images/arrow_left.png);
+    background: url(../images/arrow_left.webp);
     background-size: 3.5rem;
     background-position: left;
     background-repeat: no-repeat;
@@ -393,7 +393,7 @@ h2, h3, h4{
 }
 
 .button-right {
-    background: url(../images/arrow_right.png);
+    background: url(../images/arrow_right.webp);
     background-size: 3.5rem;
     background-position: right;
     background-repeat: no-repeat;
@@ -431,7 +431,7 @@ h2, h3, h4{
 
 .footer {
     background-color: var(--dark-bg-color-footer);
-    background-image: url(../images/filtro-web.png);
+    background-image: url(../images/filtro-web.webp);
     color: var(--dark-text-color-footer);
     padding: 4px 10px 15px 20px; 
     text-align: left;
