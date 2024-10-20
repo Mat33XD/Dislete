@@ -24,16 +24,16 @@
     background-color: var(--dark-bg-color);
     color: var(--dark-text-color);
     scrollbar-color:#555596 #4f4f4f;
-    --dark-bg-color: #f6fdfd;
-    --dark-bg-color-section: #afaeae;
-    --dark-text-color: #121114;
-    --dark-var-color: #756f8f;
-    --dark-panel-color: #746a81;
-    --dark-bg-color-footer: #12121f;
+    --dark-bg-color: #dfecff;
+    --dark-bg-color-section: #cbc9f7;
+    --dark-text-color: #06020c;
+    --dark-var-color: #4a4f92;
+    --dark-panel-color: #394f97;
+    --dark-bg-color-footer: #222236;
     --dark-text-color-footer: #5a6680;
-    --dark-border-color: #c5bac9;
-    --dark-button-bg-color: #473358;
-    --dark-button-text-color: #aaa8ca;
+    --dark-border-color: #191725;
+    --dark-button-bg-color: #818cac;
+    --dark-button-text-color: #0d0d0e;
     --dark-separador-color: #3c4761;
 }
 body {
@@ -165,13 +165,13 @@ h2, h3, h4{
 } 
 
 #teme__button {
+    align-self: center;
     position: relative;
     background-color: #3c4761;
     border: solid 1px white;
     border-radius: 10px;
     width: 50px;
     height: 22px;
-    margin-top: 5px;
     padding: 2px;
 }
 

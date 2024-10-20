@@ -67,7 +67,7 @@ function temeMode(){
         styleElement('--dark-bg-color','#0c0c13');
         styleElement('--dark-bg-color-section','#101010');
         styleElement('--dark-text-color','#c5c5c5');
-        styleElement('--dark-var-color', '#17151f');
+        styleElement('--dark-var-color', '#23212c');
         styleElement('--dark-panel-color', '#0e0e14');
         styleElement('--dark-bg-color-footer', '#0b0b0c');
         styleElement('--dark-text-color-footer', '#5a6680');
@@ -76,17 +76,16 @@ function temeMode(){
         styleElement('--dark-button-text-color','#5897a2');
         styleElement('--dark-separador-color', '#3c4761');
     }else {
-        styleElement('--dark-bg-color','#f6fdfd');
-        styleElement('--dark-bg-color-section','#afaeae');
-        styleElement('--dark-text-color','#121114');
-        styleElement('--dark-var-color', '#756f8f');
-        styleElement('--dark-panel-color', '#746a81');
-        styleElement('--dark-bg-color-footer', '#12121f');
+        styleElement('--dark-bg-color','#dfecff');
+        styleElement('--dark-bg-color-section','#cbc9f7');
+        styleElement('--dark-text-color','#06020c');
+        styleElement('--dark-var-color', '#4a4f92');
+        styleElement('--dark-panel-color', '#394f97');
+        styleElement('--dark-bg-color-footer', '#222236');
         styleElement('--dark-text-color-footer', '#5a6680');
-        styleElement('--dark-border-color', '#c5bac9');
-        styleElement('--dark-button-bg-color', '#473358');
-        styleElement('--dark-button-text-color','#aaa8ca');
+        styleElement('--dark-border-color', '#191725');
+        styleElement('--dark-button-bg-color', ' #818cac');
+        styleElement('--dark-button-text-color','#0d0d0e');
         styleElement('--dark-separador-color', '#3c4761');
     }
 }
-
