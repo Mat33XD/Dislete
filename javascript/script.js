@@ -60,10 +60,12 @@ function styleElement(elemento,color) {
     document.documentElement.style.setProperty(elemento,color);
 };
 let temeMode = 1;
+let useTemeMode = 0;
 const temeModePreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
 console.log(temeModePreference);
 function modeTeme(a){
     temeMode += a;
+    useTemeMode += a;
     if (temeMode % 2 === 0){
         styleElement('--dark-bg-color','#0c0c13');
         styleElement('--dark-bg-color-section','#101010');
@@ -90,6 +92,6 @@ function modeTeme(a){
         styleElement('--dark-separador-color', '#3c4761');
     };
 };
-if (temeModePreference) {
+if (temeModePreference && useTemeMode === 0) {
     modeTeme(1);
 };
