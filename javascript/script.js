@@ -59,11 +59,12 @@ function move(num) {
 function styleElement(elemento,color) {
     document.documentElement.style.setProperty(elemento,color);
 };
-let temeButton = document.getElementById('teme__interruptor');
-let temeButtonMode = 0;
-function temeMode(){
-    temeButtonMode = temeButton.checked;
-    if (temeButtonMode){
+let temeMode = 1;
+const temeModePreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log(temeModePreference);
+function modeTeme(a){
+    temeMode += a;
+    if (temeMode % 2 === 0){
         styleElement('--dark-bg-color','#0c0c13');
         styleElement('--dark-bg-color-section','#101010');
         styleElement('--dark-text-color','#c5c5c5');
@@ -87,5 +88,8 @@ function temeMode(){
         styleElement('--dark-button-bg-color', ' #818cac');
         styleElement('--dark-button-text-color','#0d0d0e');
         styleElement('--dark-separador-color', '#3c4761');
-    }
-}
+    };
+};
+if (temeModePreference) {
+    modeTeme(1);
+};
