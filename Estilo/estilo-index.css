@@ -267,7 +267,7 @@ h2, h3, h4{
     top: 0;
     right: -100vw;
     width: 4.3cm;
-    height: 100dvh;
+    height: 100lvh;
     transition: right 0.32s ease-in-out;
     text-align: left;
 }
@@ -279,7 +279,7 @@ h2, h3, h4{
     margin: 0;
     top: 0;
     right: -100vw;
-    height: 100dvh;
+    height: 100lvh;
     width: 100vw;
     transition: opacity .5s .01s, right .01s;
 }
@@ -334,7 +334,7 @@ h2, h3, h4{
     position: absolute;
     background-color:var(--color-column-panel);
     box-shadow: 8px 0px 35px 0px var(--color-shadow-column-panel);
-    height: 100dvh;
+    height: 100lvh;
     width: 12px;
 }
 
