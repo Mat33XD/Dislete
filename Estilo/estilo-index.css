@@ -21,20 +21,33 @@
     font-family: Merriweather, roboto, sans-serif;
     font-weight: 400;
     font-size: 17px;
-    background-color: var(--dark-bg-color);
-    color: var(--dark-text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     scrollbar-color:#555596 #4f4f4f;
-    --dark-bg-color: #dfecff;
-    --dark-bg-color-section: #cbc9f7;
-    --dark-text-color: #06020c;
-    --dark-var-color: #4a4f92;
-    --dark-panel-color: #394f97;
-    --dark-bg-color-footer: #222236;
-    --dark-text-color-footer: #5a6680;
-    --dark-border-color: #191725;
-    --dark-button-bg-color: #818cac;
-    --dark-button-text-color: #0d0d0e;
-    --dark-separador-color: #3c4761;
+    --bg-color                  :#f0f6ff  ;
+    --bg-color-section          :#c7c6d4  ;
+    --text-color                :#06020c  ;
+    --var-color                 :#434783  ;
+    --bg-color-temeButton       :#3c4761  ;
+    --bg-color-temeButton-off   :#c5c5c5  ;
+    --bg-color-topButton        :#3d3a52  ;
+    --color-var-topButton       :#131313  ;
+    --panel-color               :#cccccc  ;
+    --color-column-panel        :#2d3053  ;
+    --color-shadow-column-panel :#34344d59;
+    --text-panel-color          :#000000  ;
+    --text-panel-color-active   :#13635d  ;
+    --text-color-column-panel   :#fff3f3  ;
+    --button-bg-color           :#818cac  ;
+    --button-text-color         :#040024  ;
+    --border-color              :#191725  ;
+    --button-bg-color-hover     :#97a0bd  ;
+    --button-text-color-hover   :#1a1a53  ;
+    --border-color-hover        :#42458871;
+    --shadow-text-color-button  :#576a75  ;
+    --separador-color           :#3c4761  ;
+    --bg-color-footer           :#222236  ;
+    --text-color-footer         :#5a6680  ;
 }
 body {
     margin: 0;
@@ -47,7 +60,7 @@ body {
 }
 
 h1 {
-    color: var(--dark-text-color);
+    color: var(--text-color);
     text-align: center;
     font-weight: 900;
     font-size: 3rem;
@@ -90,7 +103,7 @@ h2, h3, h4{
 .separador {
     width: 82%;
     height: 2px;
-    background-color: var(--dark-separador-color);
+    background-color: var(--separador-color);
     margin: auto;
 }
 
@@ -102,9 +115,9 @@ h2, h3, h4{
 /* ------------------------ Marco para Secciones */ 
 
 .sections {
-    background-color: var(--dark-bg-color-section);
+    background-color: var(--bg-color-section);
     background-image: url(../images/filtro-web.webp);
-    border: solid 3px var(--dark-border-color);
+    border: solid 3px var(--border-color);
     height: fit-content;
     width: clamp(60mm, 100%, 30cm);
     margin: auto;
@@ -117,7 +130,7 @@ h2, h3, h4{
 /* ------------------------ Inicío de var */
 
 .var {
-    background-color: var(--dark-var-color);
+    background-color: var(--var-color);
     background-image: url(../images/filtro-web.webp);
     display: flex;
     padding: 10px;
@@ -145,11 +158,11 @@ h2, h3, h4{
 
 .var__option > a {
     text-decoration: none;
-    color: var(--dark-button-text-color);
+    color: var(--button-text-color);
     padding: 6px 10px;
     margin: 10px;
-    background-color: var(--dark-button-bg-color);
-    border: solid 1px var(--dark-border-color);
+    background-color: var(--button-bg-color);
+    border: solid 1px var(--border-color);
     border-radius: 8px;
     font-weight: 900;
     font-family: roboto;
@@ -158,16 +171,16 @@ h2, h3, h4{
 }
 
 .var__option > a:hover {
-    background-color: #3e3d49;
-    color: #80c9de;
-    text-shadow: 1px 1px 8px #000000;
-    border: solid 1px #404040;
+    background-color: var(--button-bg-color-hover);
+    color: var(--button-text-color-hover);
+    text-shadow: 1px 1px 8px var(--shadow-text-color-button);
+    border: solid 1px var(--border-color-hover);
 } 
 
 #teme__button {
     align-self: center;
     position: relative;
-    background-color: #3c4761;
+    background-color: var(--bg-color-temeButton);
     border: solid 1px white;
     border-radius: 10px;
     width: 50px;
@@ -181,7 +194,7 @@ h2, h3, h4{
     height: 16px;
     border-radius: 50px;
     right: 29px;
-    background-color: #c5c5c5;
+    background-color: var(--bg-color-temeButton-off);
     transition: all .2s;
 }
 
@@ -191,7 +204,6 @@ h2, h3, h4{
 
 #teme__interruptor:checked + #teme__button > #teme__mode {
     right: 3px;
-    background-color: #20202b;
 }
 
 /* ------------------------- boton de sección */
@@ -207,7 +219,7 @@ h2, h3, h4{
     justify-content: space-between;
     padding: 2px;
     border-radius: 4px;
-    background-color: #3d3a52;
+    background-color: var(--bg-color-topButton);
     width: 30px;
     height: 30px;
     transition-timing-function: linear;
@@ -215,7 +227,7 @@ h2, h3, h4{
 }
 
 .button__content > div {
-    background-color: #131313;
+    background-color: var(--color-var-topButton);
     height: 3px;
     width: 100%;
     border-radius: 2px;
@@ -225,8 +237,8 @@ h2, h3, h4{
 }
 
 #top__button:checked ~ .button__content {
-    background-color: rgb(173, 7, 7);
-    box-shadow: 0 0 8px 0 rgb(233, 14, 14);
+    background-color: #ad0707;
+    box-shadow: 0 0 8px 0 #e90e0e;
 }
 
 #top__button:checked ~ .button__content > div:first-child{
@@ -246,7 +258,7 @@ h2, h3, h4{
 /* ------------------- Panel de opciones */
 
 .panel__option {
-    background-color: var(--dark-panel-color);
+    background-color: var(--panel-color);
     background-image: url(../images/filtro-web-start.webp);
     background-size: contain;
     filter: drop-shadow(0px 0px 6px rgb(21, 23, 39));
@@ -255,8 +267,7 @@ h2, h3, h4{
     top: 0;
     right: -100vw;
     width: 4.3cm;
-    height: 100vh;
-    padding-top: 80px;
+    height: 100dvh;
     transition: right 0.32s ease-in-out;
     text-align: left;
 }
@@ -275,7 +286,7 @@ h2, h3, h4{
 
 .option__ul {
     list-style-type: none;
-    margin: 0;
+    margin: 25mm 0 0 15px;
     padding: 0;
 }
 
@@ -288,12 +299,12 @@ h2, h3, h4{
     min-width: min-content;
     max-width: 120px;
     display: block;
-    border: solid 2px var(--dark-border-color);
+    border: solid 2px var(--border-color);
     border-top: 0px;
     border-left: 0px;
     border-bottom-right-radius: 5px;
     text-decoration: none;
-    color: var(--dark-text-color);
+    color: var(--text-panel-color);
     font-family: roboto;
     font-weight: 900;
     font-size: 18px;
@@ -302,8 +313,8 @@ h2, h3, h4{
 }
 
 .option__item > a:hover {
-    color: var(--dark-separador-color);
-    border-color: #201d33;
+    color: var(--text-panel-color-active);
+    border-color: var(--text-panel-color-active);
 }
 
 #top__button:checked ~ .panel__option {
@@ -315,6 +326,30 @@ h2, h3, h4{
     opacity: 25%;
 }
 
+#top__button:checked ~ .panel__option > .objectPanelHorizontal {
+    color: var(--text-color-column-panel);
+}
+
+.objectPanelVertical {
+    position: absolute;
+    background-color:var(--color-column-panel);
+    box-shadow: 8px 0px 35px 0px var(--color-shadow-column-panel);
+    height: 100dvh;
+    width: 12px;
+}
+
+.objectPanelHorizontal {
+    position: absolute;
+    background-color:var(--color-column-panel);
+    box-shadow: 15px 0px 40px 4px var(--color-shadow-column-panel);
+    color: transparent;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 30%;
+    height: 70px;
+    width: 100%;
+    transition: color .1s;
+} 
 /* --------------------------- Tablon de anunciós */
 
 .TítuloTablon {
@@ -323,8 +358,8 @@ h2, h3, h4{
 }
 
 .Tablon {
-    background-color: var(--dark-bg-color-section);
-    border: solid 4px var(--dark-border-color);
+    background-color: var(--bg-color-section);
+    border: solid 4px var(--border-color);
     border-left: none;
     border-right: none;
     height: clamp(70mm, 65vh, 100mm);
@@ -335,8 +370,8 @@ h2, h3, h4{
 }
 
 .Tablon__item {
-    background-color: var(--dark-text-color-footer);
-    border: solid 2px var(--dark-border-color);
+    background-color: var(--text-color-footer);
+    border: solid 2px var(--border-color);
     border-left: none;
     border-right: none;
     height: 80%;
@@ -367,7 +402,7 @@ h2, h3, h4{
 .item__button {
     background-color: #48e;
     text-decoration: none;
-    color: var(--dark-text-color);
+    color: var(--text-color);
     padding: 5px 10px;
     margin-left: 5%;
 }
@@ -380,7 +415,7 @@ h2, h3, h4{
     height: 100%;
     position: absolute;
     z-index: 0;
-    color: var(--dark-text-color);
+    color: var(--text-color);
     transition: background-size .4s;
 }
 
@@ -430,9 +465,9 @@ h2, h3, h4{
 /* pie de la página */
 
 .footer {
-    background-color: var(--dark-bg-color-footer);
+    background-color: var(--bg-color-footer);
     background-image: url(../images/filtro-web.webp);
-    color: var(--dark-text-color-footer);
+    color: var(--text-color-footer);
     padding: 4px 10px 15px 20px; 
     text-align: left;
     font-weight: 400;
@@ -452,7 +487,7 @@ h2, h3, h4{
 }
 
 .footer a {
-    color: var(--dark-text-color-footer);
+    color: var(--text-color-footer);
     text-decoration: none;
     font-size: .8rem;
     padding-left: 10px;
