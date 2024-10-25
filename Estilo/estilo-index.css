@@ -268,7 +268,7 @@ h2, h3, h4{
     right: -100vw;
     width: 4.3cm;
     height: 100lvh;
-    transition: right 0.32s ease-in-out;
+    transition: right 0.2s ease-in-out;
     text-align: left;
 }
 
